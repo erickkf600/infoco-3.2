@@ -1,0 +1,49 @@
+header{
+    display:flex;
+    flex-direction:row; 
+    justify-content:space-between}
+body {background:#efefef}
+.out{margin:15px 46px}
+.titulo{
+    color:#000;
+    margin:10px 0 50px 0;
+    font-weight:300}
+#nome{text-transform:capitalize;}
+.card{background:#232323}
+.pesq {border:none;background:#232323}
+.pesq:focus{
+    border: none;
+    outline: none;
+    color: #fff;
+    box-shadow: none;
+    background:#232323}
+#botao{
+    background:#232323;
+    color: #8c8a8a;
+    height: 87px;
+    display: block;
+    border-radius: 0;
+    border-left: 1px solid #9b9b9b;
+    font-size: 20px;
+    position: absolute;
+    right: -5px;
+    top: -41%}
+.card-counter{
+    margin: 5px;
+    padding: 37px;
+    text-align: center;
+    background:linear-gradient( #000, #5b5b5b);
+    color: #fff;
+    font-weight: 300;
+    font-family: sans-serif;
+    height: 100px}
+.card-counter:hover{background:#000}
+.itens{
+    display: flex;
+    flex-direction: row;
+    justify-content: center}
+.box{margin: 0}
+.box a{text-decoration: none;}
+@media only screen and (max-width:420px){
+    .card-counter{padding:30px}
+}

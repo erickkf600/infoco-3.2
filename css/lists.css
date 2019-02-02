@@ -1,0 +1,44 @@
+header{
+    display:flex;
+    flex-direction:row; 
+    justify-content:space-between}
+body {background:#efefef}
+.out{margin:15px 46px}
+.logo{
+	margin:16px 46px;
+	color:#fff;
+	font-size:20px}
+.pesq{border:none;background:#232323;border-radius:0;}
+.pesq:focus{
+    border:none;
+    outline:none;
+    color:#fff;
+    box-shadow:none;
+    background:#232323}
+.table{
+    background:linear-gradient(#bcbcbc,#e2e2e2);
+    box-shadow:0px 4px 4px rgba(0,0,0,0.3);
+    margin-top:50px}
+tr:nth-child(even){background:linear-gradient(#8e8e8e,#a5a5a5)}
+.low{display:none}
+.table>tbody>tr>td{vertical-align:center}
+@media screen and (max-width:1024px){
+  .low{display: block}
+  table#func tbody td .form-control{width:20%;display: inline !important}
+  table#func thead{display:none}
+  table#func tbody td{display:block;padding:.3rem;min-width:320px}
+  table#func tbody tr td:first-child{background:#ccc;color:#fff}
+  table#func tbody td:before{
+    content:attr(data-th); 
+    font-weight:bold;
+    display:inline; 
+    width:5rem}  
+}
+.flex{
+  display: flex;
+  flex-flow: row}
+#cad{
+  color:#fff;
+  line-height:30px;
+  border-radius:0}
+

@@ -1,0 +1,166 @@
+.wow
+  @include tablet-mini
+    @include transition(none)
+.welcome-area
+  @extend %f-left
+  @extend %d-inline
+  width: 100%
+
+#about
+  background-color: #fff
+  width: 100%
+  @extend %p-relative
+
+.title-area
+  @extend %d-inline
+  @extend %f-left
+  position: relative
+  text-align: center
+  width: 100%
+  padding-bottom: 20px
+  p
+    max-width: 80%
+    margin: 0 auto
+    color: #686868
+    padding-bottom: 30px
+    @extend %font
+    letter-spacing: 1.2px 
+    font:
+      size: 18px
+      weight: 400
+    @include tablet-mini
+      max-width: 100%     
+.tittle-line
+  background: #898989
+  @extend %d-inline-block  
+  height: 3px
+  margin-bottom: 16px
+  width: 60px
+
+.tittle
+  color: #3a3a3a
+  font:
+    size: 40px
+    weight: 700
+  margin-bottom: 0
+  padding-bottom: 18px
+
+.welcome-content
+  display: flex
+  width: 100%
+  margin-top: 50px
+.wc-table
+  text-align: center
+  @include pc-md
+    width: 100% 
+    display: flex 
+    padding: 0
+  @include tablet-mini
+    flex-flow: row wrap
+  @include celular
+    justify-content: center  
+  li
+    @include tablet-mini
+      padding: 0
+    @include celular-md
+      padding: 10px 
+      margin-bottom: 20px
+      width: 100%  
+       
+.single-wc-content
+  @extend %f-left
+  @extend %d-inline
+  width: 100%  
+  span
+    border-radius: 100%
+    @extend %d-inline-block  
+    font-size: 35px
+    height: 117px
+    line-height: 117px
+    text-align: center
+    width: 117px
+    @include transition(all 0.5s)
+  .wc-tittle
+    color: #525252
+    text-transform: uppercase
+    font-size: 18px
+    border-bottom: 1px solid #bbbbbb
+    margin-top: 32px
+    padding-bottom: 17px
+  p
+    color: #7d7d7d
+    font-size: 15px
+    padding: 12px
+  &:hover
+    .wc-icon
+      color: #fff
+    .wc-tittle
+      padding-bottom: 16px
+ 
+.about-area
+  @extend %d-inline
+  @extend %f-left
+  margin-top: 45px
+  margin-bottom: 25px
+  width: 100%
+
+.about-right
+  @extend %d-inline
+  @extend %f-left
+  padding-left: 85px
+  padding-top: 20px
+  width: 100%
+  .title-area
+    text-align: left
+    padding: 0px
+    .tittle
+      padding-bottom: 47px  
+      @include tablet-mini
+        padding-bottom: 10px
+        font-size: 28px
+    .tittle-line
+      height: 2px
+      margin-bottom: 35px
+      width: 100px
+    p
+      color: #535353
+      @extend %font
+      font-weight: 400 
+      margin-bottom: 32px  
+.about-btn-area
+  float: left
+  display: inline
+  margin-top: 14px
+  width: 100%
+  a
+    float: left 
+    display: block
+    border: none
+    padding: 10px 25px 10px 25px
+    @include tablet-mini
+      padding: 10px
+    @include celular-xs
+      padding: 3px   
+    background: none
+    @extend %color-laranja
+    border: solid 2px $laranja
+    @extend %t-3s
+    font: 
+      size: 18px
+      weight: bold
+    &:hover
+      text-decoration: none
+      @extend %color-branco
+      @extend %back-laranja  
+
+
+  
+
+
+
+
+  
+
+    
+
+

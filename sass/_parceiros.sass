@@ -1,0 +1,66 @@
+#parceiros
+  background:#23282d
+  padding: 70px 0 30px 0
+  width: 100%
+  .p-nov
+    padding-bottom: 3rem
+    color: #ccc
+	
+#linha-card
+  display: block
+  margin: 0 auto
+  width: 83%
+  @include full-hd
+    width: 100% 
+  @include celular-md
+    max-width: 100% 
+.cards-item
+  display: flex
+  margin: 8px 0
+  padding: .8rem
+  border: solid .5px #707070
+  .card-image
+    overflow: hidden
+    @extend %p-relative
+    img
+      width: 100% 
+      height: auto
+  .card-title
+    color: #696969
+    height: 45px 
+    padding-top: 10px
+    text: 
+      transform: uppercase
+      align: center     
+    font:
+      size: 1.25rem
+      weight: 300
+.card-btn
+  color: #fff
+  border: solid .5px $laranja
+  @extend %back-laranja 
+  @extend %t-3s
+  &:hover
+    @extend %color-laranja
+    @extend %back-transparent
+
+.ver-mais
+  display: block
+  border: solid .5px #ff871c
+  color: #ff871c
+  margin: 5rem auto 0
+  width: 20rem
+  font-size: 18px
+  font-weight: 400
+  @extend %t-3s
+  &:hover
+    @extend %color-branco
+    @extend %back-laranja
+
+
+
+
+  
+
+    
+

@@ -1,0 +1,101 @@
+
+#partners
+  background: #f8f8f8
+  @extend %d-inline
+  @extend %f-left
+  padding: 70px 0
+  width: 100%
+  @include celular
+    float: none
+
+.area
+  @extend %d-inline
+  @extend %f-left
+  width: 100%
+
+.conteudo
+  margin-bottom: 35px
+  figure img
+    height: 400px
+.paginacao
+  li
+    a, span
+      padding: 8px 10px
+      @extend %t-3s
+      @extend %color-branco
+      @extend %back-laranja
+      &:hover
+        @extend %color-laranja
+        @extend %back-transparent        
+      &:first-child 
+        border-bottom-left-radius: 0px
+        border-top-left-radius: 0px
+        margin-left: 0 
+      &:last-child
+        border-bottom-right-radius: 0px
+        border-top-right-radius: 0px     
+ 
+
+.items-esquerda
+  background: #fff
+  padding: 3rem 0 2rem 0
+    
+/*ESTILO DOS ITEMS DA DIREITA*/ 
+
+.direita-cont
+  background-color: #fff
+  border: 1px solid #f0f0f0
+  @extend %d-inline
+  margin-bottom: 30px
+  @extend %f-left
+  padding: 20px 30px
+  width: 100%
+  h2
+    color: #444444
+    font-size: 25px
+    line-height: 25px
+    margin-bottom: 15px
+    margin-left: -31px
+    padding-bottom: 0
+    padding-left: 29px
+    padding-top: 0
+  .intagram-title
+    display: flex
+    justify-content: space-between
+    a
+      &:hover
+        text-decoration: none
+        @extend %color-laranja 
+    
+.insere-texto    
+  @extend %d-inline
+  @extend %f-left
+  width: 100%
+  input
+    background: #f5f5f5
+    border: 1px solid #9d9d9d
+    color: #444
+    height: 43px
+    padding: 5px
+    width: 100%
+    @extend %t-3s
+    &:focus
+      outline: none
+      border: solid 1px $laranja
+      box-shadow: 0 0 0 0.1rem $laranja 
+  #pesquisar-btn
+    @extend %color-branco
+    margin: 12px 0 10px 0
+    padding: 7px 30px
+    @extend %back-laranja
+    @extend %font
+    @extend %t-3s
+    border: 2px solid $laranja
+    font:
+      size: 17px
+      weight: 600
+    &:hover
+      @extend %color-laranja  
+      @extend %back-transparent
+ 
+    

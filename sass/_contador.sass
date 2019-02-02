@@ -1,0 +1,42 @@
+#counter
+  border: 1px solid $laranja 
+  padding: 25px 0 20px 0
+  #sec-counter
+    display: flex  
+    justify-content: space-around
+    margin-top: 20px
+    h1
+      margin-top: 20px
+      padding: 5px
+  .single-counter
+    display: flex 
+    @include celular
+      flex-flow: column
+      text-align: center
+    i
+      @extend %color-laranja
+      font-size: 50px
+    .counter-count 
+      margin: 5px 20px 0 20px 
+      @include celular
+        margin: 0 10px 0 10px 
+      h2
+        @extend %color-laranja
+        font:
+          size: 40px
+          weight: 600
+      p
+        @extend %color-laranja
+        @extend %font
+        font:
+          size: 25px 
+          weight: 400
+        margin-top: -5px
+        @include tablet-mini
+          font-size: 18px  
+    
+
+     
+
+
+

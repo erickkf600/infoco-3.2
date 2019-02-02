@@ -1,0 +1,73 @@
+#call-to-action
+  float: left
+  width: 100%
+  @extend %d-inline
+  @extend %p-relative
+.call-to-overlay
+  background-image: url("../img/call-to-action-bg.png")
+  background-repeat: no-repeat
+  background-size: cover
+  @extend %p-relative
+  @include tablet-mini
+    background: none 
+.call-to-content
+  display: inline
+  float: left
+  padding: 50px 0
+  text-align: center
+  width: 100%
+  p
+    color: #ccc
+.call-to-content
+  @include celular-md
+    padding: 0	
+  h2
+    color: #fff7f7
+    font-size: 45px
+    @include celular
+      font-size: 20px
+    span
+      @extend %color-laranja
+  p
+    font:
+      family: 'Yantramanav', sans-serif
+      size: 16px       
+
+#form-linha
+  display: flex
+  justify-content: center
+  padding: 10px 0 15px 0
+  @include celular-md
+    flex-flow: column
+  input
+    border: 1px solid $laranja
+    @extend %color-branco
+    border-radius: 2px
+    padding: 7px
+    margin: 0 10px 0 10px
+    background: rgba(255,135,28,.4)
+    @include celular-md
+      margin: 0 0 10px 0
+    &:focus
+      outline: none
+  @include placeholder
+    color: #fff    
+.assinar-btn
+  @extend %color-laranja
+  @extend %back-transparent
+  border: 2px solid $laranja
+  @extend %t-3s
+  &:hover
+    @extend %color-branco
+    @extend %back-laranja
+  i
+    margin-left: 5px    
+
+
+  
+
+
+  
+
+
+
