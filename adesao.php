@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -23,11 +24,11 @@
     <section id="faq">
       <div class="container" id="container-adesao">
         <div class="faq-title">
-          <h1 title="Perguntas Frequentes" id="quem-somos">FICHA DE ADESÃO INFOCO</h1>
+          <h1 title="Faça parte da infoco" id="quem-somos">FICHA DE ADESÃO INFOCO</h1>
           <span class="tittle-line"></span>
         </div>
         <div class="col-md-12">
-          <form class="form-horizontal" method="POST" action="">
+          <form class="form-horizontal" method="POST" action="adesao-func">
             <div class="row">
               <div class="col-md-6">
                 <div class="panel">
@@ -44,31 +45,31 @@
                     <div class="form-group">
                       <label class="col-sm-4 control-label">CNPJ <span class="requerido"> *</span></label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" name="cnpj" onkeypress="return event.charCode >= 48 && event.charCode <= 57" onblur="pesquisacep(this.value);"  required>
+                        <input type="text" class="form-control" name="cnpj" onkeypress="return event.charCode >= 48 && event.charCode <= 57"  required>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-4 control-label">Nome Fantasia <span class="requerido"> *</span></label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" name="Nome Fantasia"  required>
+                        <input type="text" class="form-control" name="nomeFantasia"  required>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-4 control-label">Inscrição Municipal <span class="requerido"> *</span></label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" name="Inscrição Municipal"  required>
+                        <input type="text" class="form-control" name="inscricaoMunicipal"  required>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-4 control-label">Inscrição Estadual <span class="requerido"> *</span></label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" name="Inscrição Estadual"  required>
+                        <input type="text" class="form-control" name="inscricaoEstadual"  required>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-4 control-label">Segmento Profissional <span class="requerido"> *</span></label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" name="Segmento Profissional"  required>
+                        <input type="text" class="form-control" name="segmentoProfissional"  required>
                       </div>
                     </div>
                   </div>
@@ -107,7 +108,7 @@
                     <div class="form-group">
                       <label class="col-sm-4 control-label">Bairro <span class="requerido"> *</span></label>
                       <div class="col-sm-8">
-                        <input type="text" class="form-control" id="bairro" name="bairro" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                        <input type="text" class="form-control" id="bairro" name="bairro" required>
                       </div>
                     </div>
                     <div class="form-group">
@@ -128,8 +129,8 @@
                    <div class="form-group">
                     <label for="country" class="col-sm-4 control-label">Plano<span class="requerido"> *</span></label>
                     <div class="col-sm-8">
-                      <select name="plano" class="form-control" required="">
-                        <option selected disabled>Selecione um Plano</option>
+                      <select name="plano" class="form-control" onchange="muda_preco()" id="planos" required>
+                        <option selected disabled value="">Selecione um Plano</option>
                         <option value="Básico">Básico</option>
                         <option value="Intermediário">Intermediário</option>
                         <option value="Avançado">Avançado</option>
@@ -138,6 +139,12 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div id="planoValor">
+                <h2>Valores do Plano</h2>
+                <p>Mensalidade: <span id="valor"></span></p>
+                <p>Taxa de Adesão: <span>R$ 200.00</span></p>
+                <input type="hidden" name="valor" id="valorInput" value="valor">
               </div>
             </div>
             <div class="col-md-6" id="contato">
@@ -161,8 +168,8 @@
                   <div class="form-group">
                     <label for="country" class="col-sm-4 control-label">Whastapp?<span class="requerido"> *</span></label>
                     <div class="col-sm-8">
-                      <select name="whastapp" class="form-control" required="">
-                        <option selected disabled>Selecione</option>
+                      <select name="whastapp" class="form-control" required>
+                        <option selected disabled value="">Selecione</option>
                         <option value="sim">Sim</option>
                         <option value="nao">Não</option>
                       </select>
@@ -193,15 +200,9 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-sm-4 control-label" for="name">Twitter <span class="requerido"> *</span></label>
-                    <div class="col-sm-8">
-                      <input type="text" class="form-control" name="twitter" required>
-                    </div>
-                  </div>
-                  <div class="form-group">
                     <label class="col-sm-4 control-label" for="name">Site <span class="requerido"> *</span></label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" name="site" required>
+                      <input type="url" class="form-control" name="site" required>
                     </div>
                   </div>
                 </div>
@@ -209,16 +210,28 @@
             </div>
           </div>
           <div class="form-group text-center">
-            <button type="submit" id="submit_btn" class="btn btn-orange-md">ENVIAR</button>
+            <?php 
+            if(!empty($_SESSION['sucesso_envio'])){
+              echo "<p style='color: #01ad01; font-size: 20px; font-weight: 600'>".$_SESSION['sucesso_envio']."</p>";
+              unset($_SESSION['sucesso_envio']);
+            }else{
+              if(!empty($_SESSION['falha_envio'])){
+                echo "<p style='color: #f00>".$_SESSION['falha_envio']."</p>";
+                unset($_SESSION['falha_envio']);
+              }
+            }  
+            ?>
+            <button type="submit" id="submit_btn" class="btn btn-orange-md">EFETUAR PAGAMENTO</button>
           </div>
+            <img src="img/mpag.png" class="mpag">
         </div>
       </form> 
       <div class="faq-title">
-        <h3>Alguma duvida?</h3>
+        <h3 title="Ainda não tem certeza? Entre em contato com a infoco.">Alguma duvida?</h3>
         <span class="tittle-line"></span>
       </div>
       <div class="adesao-btn">
-        <a href="contato.php">ENTRE EM CONTATO</a>
+        <a href="contato" title="Entre em contato com a infoco">ENTRE EM CONTATO</a>
       </div>
     </div>
   </section>

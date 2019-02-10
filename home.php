@@ -43,7 +43,7 @@ $escreve =fwrite($abre, $ss);
   <a class="scrollToTop" href="#"><i class="fas fa-chevron-up"></i></a>
   <header id="header"><?php include "header.php" ?></header>
   <main>
-    <?php include"includes/sobre-infoco.php"; include"includes/contador.php"; include"parceiros.php"; include"logos.php"; include"newsletter.php"?>
+    <?php include"includes/sobre-infoco.php"; include"includes/contador.php"; include"includes/parceiros-inc.php"; include"logos.php"; include"newsletter.php"?>
   </main>  
   <footer id="footer"><?php include "footer.php" ?></footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>

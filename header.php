@@ -33,11 +33,11 @@
       <div id="navbar">
         <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
          <li><a href="home" class="home"  title="Pagina inicial infoco">HOME</a></li>
-        <li><a href="contato" title="Pagina contato infoco">CONTATO</a></li>
-        <li><a href="planos" title="Pagina planos infoco">PLANOS</a></li>
-        <li><a href="sobre" title="Pagina quem somos infoco">QUEM SOMOS</a></li>
-        <li><a href="parceiros" title="Pagina novidades infoco">PARCEIROS</a></li>
-        <li><a href="faq" title="Pagina perguntas frequentes infoco">FAQ</a></li>            
+         <li><a href="contato" title="Pagina contato infoco">CONTATO</a></li>
+         <li><a href="planos" title="Pagina planos infoco">PLANOS</a></li>
+         <li><a href="sobre" title="Pagina quem somos infoco">QUEM SOMOS</a></li>
+         <li><a href="parceiros" title="Pagina novidades infoco">PARCEIROS</a></li>
+         <li><a href="faq" title="Pagina perguntas frequentes infoco">FAQ</a></li>            
        </ul>                            
      </div>
      <div class="search-area">
@@ -51,40 +51,55 @@
 </nav> 
 </section>
 <section>
-<div id="carousel-parceiros">
-  <div class="header-inner">
-  <div class="swiper-container" id="slide-comercial">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src='img/banners/med.jpg' width='100%' alt='Medisim' title="parceiro infoco medisim">
-        <a href="http://medisim.com.br/" target="_blank" title="parceiro infoco medisim" class="btn link-carousel">VISITAR</a>
-      </div>
-      <?php 
-      $i = 0;
-      while ( $i < 5) { 
-        $i++;  
-        echo "<div class='swiper-slide'>
-        <img src='img/banners/$i.jpg' width='100%' alt='BANNER PARCEIROS INFOCO' title='Banner de Parceiros Infoco'>
-        </div>";
-      } 
-      ?>
-      <div class="swiper-slide">
-        <img src='img/banners/infoco.jpg' width='100%' alt='Infoco Publicidades' title="Infoco Publicidades">
-        <a href="adesao.php" class="btn link-infoco" title="adesão infoco">FAÇA SUA ADESÃO</a>
+  <div id="carousel-parceiros">
+    <div class="header-inner">
+      <div class="swiper-container" id="slide-comercial">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src='img/banners/med.jpg' width='100%' alt='Medisim' title="parceiro infoco medisim">
+            <a href="http://medisim.com.br/" target="_blank" title="visitar parceiro infoco medisim" class="btn link-carousel">VISITAR</a>
+          </div>
+          <div class="swiper-slide">
+            <img src='img/banners/as.jpg' width='100%' alt='A.S Calvete Contabilidade' title="parceiro infoco A.S Calvete Contabilidade">
+            <a href="https://www.instagram.com/ascalvetecontabilidade/?hl=pt-br" target="_blank" title="visitar parceiro infoco A.S Calvete Contabilidade" class="btn link-carousel" id="asc">VISITAR</a>
+          </div>
+          <div class="swiper-slide">
+            <img src='img/banners/nsa.jpg' width='100%' alt='Mercado NSA' title="Infoco parceiro Mercado NSA">
+            <a href="https://www.facebook.com/Mercado-NSA-267212664194794/" target="_blank" class="btn link-carousel" id="nsa" title="visitar parceiro infoco mercado nsa">VISITAR</a>
+          </div>
+          <div class="swiper-slide">
+            <img src='img/banners/ccaa.jpg' width='100%' alt='Curso CCAA' title="Infoco parceiro CCAA">
+            <div class="buttons">
+              <a href="https://www.facebook.com/ccaaaustin/" class="btn" target="_blank" title="Visitar infoco parcerio CCAA Austin">Visite a Página de Austin</a>
+              <a href="https://www.facebook.com/CCAA-Queimados-142498819274804/" target="_blank" class="btn" title="Visitar infoco parcerio CCAA Queimados">Visite a Página de Queimados</a>
+            </div>
+          </div>
+          <?php 
+          $i = 0;
+          while ( $i < 4) { 
+            $i++;  
+            echo "<div class='swiper-slide'>
+            <img src='img/banners/$i.jpg' width='100%' alt='BANNER INFOCO PARCEIROS' title='Banner de Parceiros Infoco'>
+            </div>";
+          } 
+          ?>
+          <div class="swiper-slide">
+            <img src='img/banners/infoco.jpg' width='100%' alt='Infoco Publicidades' title="Infoco Publicidades">
+            <a href="adesao.php" class="btn link-infoco" title="adesão infoco">FAÇA SUA ADESÃO</a>
+          </div>
+        </div>
+        <div class="scrolldown">
+          <a class="scroll-icon smoothscroll" title="Veja mais da infoco">    
+            Role para Baixo       
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div> 
+        <div class="next-back">
+          <div class="voltar"></div>
+          <div class="proximo"></div>
+        </div>
+        <div class="swiper-pagination"></div>     
       </div>
     </div>
-    <div class="scrolldown">
-      <a class="scroll-icon smoothscroll" title="Veja mais da infoco">    
-        Role para Baixo       
-        <i class="fas fa-arrow-right"></i>
-      </a>
-    </div> 
-    <div class="next-back">
-      <div class="voltar"></div>
-      <div class="proximo"></div>
-    </div>
-    <div class="swiper-pagination"></div>     
   </div>
-</div>
-</div>
 </section>

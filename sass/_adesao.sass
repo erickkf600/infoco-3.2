@@ -18,13 +18,15 @@
   
 .btn-orange-md 
     background: #FF791F !important
-    width: 40% 
+    width: 400px 
     border-bottom: 3px solid #ae4d13 !important
     margin-bottom: 3rem
     @extend %color-branco 
     &:hover
       background: #d86016 !important
       @extend %color-branco
+    @include celular-md
+      width: 280px   
 #contato
   margin-top: -13rem
   margin-bottom: 5rem
@@ -38,6 +40,30 @@
     size: 17px 
     weight: 600    
 
+#planoValor
+  text-align: center
+  left: 0
+  right: 0
+  margin: 5rem auto
+  @extend %p-absolute
+  @include tablet-mini
+    position: static
+  p
+    margin: 10px 20px 1px 20px
+    @extend %font
+    font:
+      size: 20px 
+  span
+    letter-spacing: 1.2px
+    @extend %font
+    @extend %color-laranja 
+    font:
+      size: 30px
+      weight: 600    
+.mpag
+  display: block
+  margin: -30px auto 
+  padding-bottom: 10rem
   
 
 

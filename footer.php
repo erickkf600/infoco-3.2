@@ -1,12 +1,3 @@
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
 <div class="container-fluid">
   <img src="intro.png" class="img-fluid" alt="infoco" title="infoco" width="20%" id="img-footer">
   <hr class="line">
@@ -34,7 +25,7 @@
         <li><a href="categoria.php?infocateg=alimentacao">Alimentação</a></li>
       </ul>
     </div>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-md-4 col-sm-6">
       <h5>Institucional</h5>
       <ul class="list-unstyled quick-links">
         <li><a href="faq.php">FAQ</a></li>
@@ -42,9 +33,8 @@
       </ul>
     </div>
     <div class="col-md-4">
-      <div class="fb-page" data-href="https://www.facebook.com/Infoco-Publicidades-2020576488244678/" data-height="100%" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-        <blockquote cite="https://www.facebook.com/Infoco-Publicidades-2020576488244678/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/InFoco-Marketing-Multin%C3%ADvel-1184742348366469/"></a></blockquote>
-      </div>
+      <img src="img/selo.png">
+      <img src="img/mpag-footer.png">
     </div>
   </div>
   <div class="sociais">

@@ -3,4 +3,38 @@
 function limpa_formulário_cep(){document.getElementById("endereco").value="",document.getElementById("bairro").value="",document.getElementById("municipio").value="",document.getElementById("uf").value=""}function meu_callback(e){"erro"in e?(limpa_formulário_cep(),alert("CEP não encontrado.")):(document.getElementById("endereco").value=e.logradouro,document.getElementById("bairro").value=e.bairro,document.getElementById("municipio").value=e.localidade,document.getElementById("uf").value=e.uf)}function pesquisacep(e){var a=e.replace(/\D/g,"");if(""!=a){if(/^[0-9]{8}$/.test(a)){document.getElementById("endereco").value="...",document.getElementById("bairro").value="...",document.getElementById("municipio").value="...",document.getElementById("uf").value="...";var o=document.createElement("script");o.src="https://viacep.com.br/ws/"+a+"/json/?callback=meu_callback",document.body.appendChild(o)}else limpa_formulário_cep(),alert("Formato de CEP inválido.")}else limpa_formulário_cep()}jQuery(function(e){new Swiper("#slide-comercial",{loop:"true",pagination:{el:".swiper-pagination",dynamicBullets:!0},autoplay:{delay:5e3,disableOnInteraction:!0},navigation:{nextEl:".proximo",prevEl:".voltar"}});jQuery(window).bind("scroll",function(){height=2*e(window).height()/2.2,e(window).scrollTop()>height?(e(".main-navbar").addClass("navbar-fixed-top"),e(".logo").addClass("logo-compressed"),e(".main-nav li a").addClass("less-padding"),e(".search-area").addClass("search-area_bottom"),e(".search-area").css("height","44"),e('.search-area input[type="text"]').css("top","35%")):(e(".main-navbar").removeClass("navbar-fixed-top"),e(".logo").removeClass("logo-compressed"),e(".main-nav li a").removeClass("less-padding"),e(".search-area").removeClass("search-area_bottom"),e(".search-area").css("height","60"),e('.search-area input[type="text"]').css("top","11%"))});new Swiper("#logos-infoco",{slidesPerView:3,spaceBetween:10,loop:!0,autoplay:{delay:4e3},breakpoints:{1920:{slidesPerView:5,spaceBetween:15},420:{slidesPerView:3,spaceBetween:15},320:{slidesPerView:2,spaceBetween:10}}});jQuery(window).scroll(function(){300<e(this).scrollTop()?e(".scrollToTop").fadeIn():e(".scrollToTop").fadeOut()}),jQuery(".scrollToTop").click(function(){return e("html, body").animate({scrollTop:0},500),!1}),e(document).ready(function(){e(".menu").click(function(){e("#nav").toggleClass("show")}),e("#fechar").click(function(){e("#nav").toggleClass("show")})}),jQuery(window).load(function(){jQuery(".loader").fadeOut(),jQuery("#preloader").delay(100).fadeOut("slow"),jQuery("body").delay(100).css({overflow:"visible"})}),wow=new WOW({animateClass:"animated",offset:100,callback:function(e){console.log("WOW: animating <"+e.tagName.toLowerCase()+">")}}),wow.init()});
 (function(e){"use strict";e.fn.counterUp=function(t){var n=e.extend({time:400,delay:10},t);return this.each(function(){var t=e(this),r=n,i=function(){var e=[],n=r.time/r.delay,i=t.text(),s=/[0-9]+,[0-9]+/.test(i);i=i.replace(/,/g,"");var o=/^[0-9]+$/.test(i),u=/^[0-9]+\.[0-9]+$/.test(i),a=u?(i.split(".")[1]||[]).length:0;for(var f=n;f>=1;f--){var l=parseInt(i/n*f);u&&(l=parseFloat(i/n*f).toFixed(a));if(s)while(/(\d+)(\d{3})/.test(l.toString()))l=l.toString().replace(/(\d+)(\d{3})/,"$1,$2");e.unshift(l)}t.data("counterup-nums",e);t.text("0");var c=function(){t.text(t.data("counterup-nums").shift());if(t.data("counterup-nums").length)setTimeout(t.data("counterup-func"),r.delay);else{delete t.data("counterup-nums");t.data("counterup-nums",null);t.data("counterup-func",null)}};t.data("counterup-func",c);setTimeout(t.data("counterup-func"),r.delay)};t.waypoint(i,{offset:"100%",triggerOnce:!0})})}})(jQuery);
  jQuery(".counter").counterUp({delay:10,time:1e3});
+ //Adicionar campo
 function mostra_div(){"empresas parceiras"==$("#options").val()?$("#QualEmpresa").show():$("#QualEmpresa").hide()}$("#QualEmpresa").hide();
+//MUDAR PREÇOS DOS PLANOS
+
+function muda_preco() {
+    if ($("#planos").val() == "Básico"){
+    	$("#planoValor").show();
+    	var preco = 'R$ 200,00';
+   		document.getElementById("valor").innerHTML = "" + preco + "";
+   		document.getElementById("valorInput").value = preco;
+    }else{
+    	if ($("#planos").val() == "Intermediário") {
+    		$("#planoValor").show();
+    		var preco = 'R$ 400,00';
+   			document.getElementById("valor").innerHTML = "" + preco + "";
+   			document.getElementById("valorInput").value = preco;	
+    	}
+    	if ($("#planos").val() == "Avançado") {
+    		$("#planoValor").show();
+    		var preco = 'R$ 1.500,00';
+   			document.getElementById("valor").innerHTML = "" + preco + "";
+   			document.getElementById("valorInput").value = preco;	
+    	}
+    	if ($("#planos").val() == "Super") {
+    		$("#planoValor").show();
+    		var preco = 'R$ 2.200,00';
+   			document.getElementById("valor").innerHTML = "" + preco + "";
+   			document.getElementById("valorInput").value = preco;	
+    	}
+
+    }
+
+}
+$("#planoValor").hide();
+

@@ -99,58 +99,65 @@
       <div class="row">
         <div class="col-md-6 how-img">
           <img src="img/desconto.png" alt=""/>
-       </div>
-       <div class="col-md-6 txt-about desc">
-        <h4>Descontos Exclusivos</h4>
-        <p>
-          Temos em nossa plataforma, várias empresas credenciadas e de segmentos distintos para você usufruir de descontos exclusivos e também adquirir produtos e serviços com qualidade garantida.
-        </p>
-      </div>
-    </div>
-    <div class="row pc">
-      <div class="col-md-6 txt-about invertido">
-        <h4>NETWORKING</h4>
-        <p>
-          Networking é a habilidade de de gerir um negócio, com vários contatos, onde se promovem oportunidades de relacionamentos Socioeconômico. A InFoco traz essa metodologia para dentro da sua plataforma, nós nascemos dessa necessidade de criar uma rede de networking que alcance muitas empresas, de todos os portes e segmentos. 
-        </p>
-      </div>
-      <div class="col-md-6 how-img">
-        <img src="img/pc.png" class="img-fluid" alt=""/>
-      </div>
-    </div>
-  </section>
-  <section id="sobre">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 itens-redes-sociais">
-          <div class="card">
-            <h2 title="INSTAGRAM">Instagram</h2>
-            <span class="tittle-line"></span>
-            <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/d8b365292b955736b88d4eca9d826c80.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe> 
-          </div>
         </div>
-        <div class="col-md-4">
-          <div class="item-facebook">
-            <div class="fb-page" data-href="https://www.facebook.com/Infoco-Publicidades-2020576488244678/" data-tabs="timeline" data-height="400" data-width="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Infoco-Publicidades-2020576488244678/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/InFoco-Marketing-Multin%C3%ADvel-1184742348366469/">InFoco Publicidades</a></blockquote></div>
-          </div>
+        <div class="col-md-6 txt-about desc">
+          <h4>Descontos Exclusivos</h4>
+          <p>
+            Temos em nossa plataforma, várias empresas credenciadas e de segmentos distintos para você usufruir de descontos exclusivos e também adquirir produtos e serviços com qualidade garantida.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
-</main>  
-<footer id="footer"><?php include "footer.php" ?></footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>  
-<script type="text/javascript" src="js/script.js"></script>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+      <div class="row pc">
+        <div class="col-md-6 txt-about invertido">
+          <h4>NETWORKING</h4>
+          <p>
+            Networking é a habilidade de de gerir um negócio, com vários contatos, onde se promovem oportunidades de relacionamentos Socioeconômico. A InFoco traz essa metodologia para dentro da sua plataforma, nós nascemos dessa necessidade de criar uma rede de networking que alcance muitas empresas, de todos os portes e segmentos. 
+          </p>
+        </div>
+        <div class="col-md-6 how-img">
+          <img src="img/pc.png" class="img-fluid" alt=""/>
+        </div>
+      </div>
+    </section>
+    <section id="sobre">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 itens-redes-sociais">
+            <div class="card">
+              <h2 title="INSTAGRAM">Instagram</h2>
+              <span class="tittle-line"></span>
+              <script src="https://snapwidget.com/js/snapwidget.js"></script>
+              <iframe src="https://snapwidget.com/embed/651820" class="snapwidget-widget" allowtransparency="true" style="border:none; overflow:hidden; width:100%"></iframe> 
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="item-facebook">
+              <div class="fb-page" data-href="https://www.facebook.com/Infoco-Publicidades-2020576488244678/" data-tabs="timeline" data-height="480" data-width="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Infoco-Publicidades-2020576488244678/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/InFoco-Marketing-Multin%C3%ADvel-1184742348366469/">InFoco Publicidades</a></blockquote></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <h2 title="INSTAGRAM">Instagram</h2>
+              <span class="tittle-line"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>  
+  <footer id="footer"><?php include "footer.php" ?></footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>  
+  <script type="text/javascript" src="js/script.js"></script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
 </body>
 </html>

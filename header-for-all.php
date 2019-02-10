@@ -5,12 +5,12 @@
       <ul>
         <span>
           <fieldset class="menu-mobile">MENU</fieldset>
-          <li><a href="index.php" class="first"  title="Inicio">HOME</a></li>
-          <li><a href="contato.php" title="Contato">CONTATO</a></li>
-          <li><a href="planos.php" title="Planos">PLANOS</a></li>
-          <li><a href="sobre.php" title="Quem nós somos">QUEM SOMOS</a></li>
-          <li><a href="partners-page.php" title="Novidades">PARCEIROS</a></li>
-          <li><a href="faq.php" title="Perguntas Frequentes">FAQ</a></li>
+          <li><a href="home" class="first"  title="Inicio">HOME</a></li>
+          <li><a href="contato" title="Contato">CONTATO</a></li>
+          <li><a href="planos" title="Planos">PLANOS</a></li>
+          <li><a href="sobre" title="Quem nós somos">QUEM SOMOS</a></li>
+          <li><a href="parceiros" title="Novidades">PARCEIROS</a></li>
+          <li><a href="faq" title="Perguntas Frequentes">FAQ</a></li>
         </span>
         <fieldset class="categ">CATEGORIAS</fieldset>
         <li><a href="categoria.php?infocateg=comercio" class="first"><i class="fas fa-store"></i>Comércio</a></li>
@@ -35,12 +35,12 @@
         </div>
         <div id="navbar">
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-            <li class="active"><a href="index.php" title="Inicio">Home</a></li>
-            <li><a href="contato.php" title="Contato">CONTATO</a></li>                  
-            <li><a href="planos.php"  title="Planos">PLANOS</a></li> 
-            <li><a href="sobre.php" title="Quem nós somos">QUEM SOMOS</a></li>
-            <li><a href="partners-page.php" title="Novidades">PARCEIROS</a></li>             
-            <li><a href="faq.php" title="Perguntas Frequentes">FAQ</a></li>             
+            <li class="active"><a href="home" title="Inicio">Home</a></li>
+            <li><a href="contato" title="Contato">CONTATO</a></li>                  
+            <li><a href="planos"  title="Planos">PLANOS</a></li> 
+            <li><a href="sobre" title="Quem nós somos">QUEM SOMOS</a></li>
+            <li><a href="parceiros" title="Novidades">PARCEIROS</a></li>             
+            <li><a href="faq" title="Perguntas Frequentes">FAQ</a></li>             
           </ul>                            
         </div><!--/.nav-collapse -->
         <div class="search-area">

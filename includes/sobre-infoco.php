@@ -46,7 +46,7 @@
         <div class="about-area">
           <div class="row">
             <div class="col-md-5 col-sm-6 col-xs-12">
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/gDhmMQs15zs?rel=0&controls=0&loop=1&playlist=gDhmMQs15zs" allow="accelerometer; autoplay; gyroscope"></iframe>
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/1cj0C0q3M7M?rel=0&controls=0&loop=1&playlist=1cj0C0q3M7M" allow="accelerometer; autoplay; gyroscope"></iframe>
             </div>
             <div class="col-md-7 col-sm-6 col-xs-12">
               <div class="about-right wow fadeInRight">
@@ -55,7 +55,7 @@
                   <span class="tittle-line"></span>
                   <p>Somos uma empresa do segmento de publicidade, que chega ao mercado para oferecer o melhor em divulgação e veiculação da sua empresa promovendo um marketing digital eficaz, que gere resultados positivos e satisfatórios ao seu negócio.</p> 
                   <div class="about-btn-area">
-                    <a href="adesao.php" class="button"><span>FAÇA A SUA ADESÃO</span></a>
+                    <a href="adesao" class="button"><span>FAÇA A SUA ADESÃO</span></a>
                   </div>                    
                 </div>
               </div>
