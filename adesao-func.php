@@ -17,6 +17,7 @@
 	$numero = $post['numero'];
 
 	$plano = $post['plano'];
+	$valor = $post['valor'];
 
 	$telefone = $post['telefone'];
 	$celular = $post['celular'];
@@ -26,6 +27,8 @@
 	$instagram = $post['instagram'];
 	$twitter = $post['twitter'];
 	$site = $post['site'];
+	$forma  = "Mercado Pago";
+	$ref = rand(1,9999);
 
 	$link = 'http://localhost/INFOCO%204/adesao';
 	if (empty($nome)) {
@@ -48,6 +51,7 @@
 									bairro, 
 									numero,
 									plano,
+									valor,
 									telefone,
 									celular,
 									whastapp,
@@ -55,7 +59,9 @@
 									facebook,
 									instagram,
 									twitter,
-									site)
+									site,
+									tipoPagamento,
+									ref)
 									values(
 										'$nome', 
 										'$cnpj', 
@@ -70,6 +76,7 @@
 										'$bairro', 
 										'$numero',
 										'$plano',
+										'$valor',
 										'$telefone',
 										'$celular',
 										'$whastapp',
@@ -77,14 +84,21 @@
 										'$facebook',
 										'$instagram',
 										'$twitter',
-										'$site')";
+										'$site',
+										'$forma',
+										'$ref')";
 
 	$insert = mysqli_query($con, $query);
 	if($insert == 1){
-		$_SESSION['sucesso_envio']="Parabêns você esta cadastrado na InFoco, em breve entraremos em contato*";
-		echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$link'>";
+		$query = mysqli_query($con,"SELECT * FROM `fichaadesao` WHERE ref='$ref' LIMIT 1");
+		if($query){
+        $fat = mysqli_fetch_assoc($query);
+        $id = $fat['ref'];
+        $idc = base64_encode($id);
+		header("location: vendor/marcadoPago/pagamento.php?infocopag=$idc");
 	}else{
 		$_SESSION['falha_envio']="Ops algo deu errado. Tente novamente.*";
 		echo "<META HTTP-EQUIV=REFRESH CONTENT = '0;URL=$link'>";
 	}
+}
  ?>

@@ -11,26 +11,30 @@ function muda_preco() {
     if ($("#planos").val() == "Básico"){
     	$("#planoValor").show();
     	var preco = 'R$ 200,00';
+    	var val = '200';
    		document.getElementById("valor").innerHTML = "" + preco + "";
-   		document.getElementById("valorInput").value = preco;
+   		document.getElementById("valorInput").value = val;
     }else{
     	if ($("#planos").val() == "Intermediário") {
     		$("#planoValor").show();
     		var preco = 'R$ 400,00';
+    		var val = '400';
    			document.getElementById("valor").innerHTML = "" + preco + "";
-   			document.getElementById("valorInput").value = preco;	
+   			document.getElementById("valorInput").value = val;	
     	}
     	if ($("#planos").val() == "Avançado") {
     		$("#planoValor").show();
     		var preco = 'R$ 1.500,00';
+    		var val = '1500';
    			document.getElementById("valor").innerHTML = "" + preco + "";
-   			document.getElementById("valorInput").value = preco;	
+   			document.getElementById("valorInput").value = val;	
     	}
     	if ($("#planos").val() == "Super") {
     		$("#planoValor").show();
     		var preco = 'R$ 2.200,00';
+    		var val = '2200';
    			document.getElementById("valor").innerHTML = "" + preco + "";
-   			document.getElementById("valorInput").value = preco;	
+   			document.getElementById("valorInput").value = val;	
     	}
 
     }

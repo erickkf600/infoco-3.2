@@ -184,25 +184,25 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label" for="name">Facebook <span class="requerido"> *</span></label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" name="facebook" required>
+                      <input type="text" class="form-control" name="facebook">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-4 control-label" for="name">Instagram <span class="requerido"> *</span></label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" name="instagram" required>
+                      <input type="text" class="form-control" name="instagram">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-4 control-label" for="name">Twitter <span class="requerido"> *</span></label>
                     <div class="col-sm-8">
-                      <input type="text" class="form-control" name="twitter" required>
+                      <input type="text" class="form-control" name="twitter">
                     </div>
                   </div>
                   <div class="form-group">
                     <label class="col-sm-4 control-label" for="name">Site <span class="requerido"> *</span></label>
                     <div class="col-sm-8">
-                      <input type="url" class="form-control" name="site" required>
+                      <input type="url" class="form-control" name="site">
                     </div>
                   </div>
                 </div>
@@ -211,15 +211,10 @@
           </div>
           <div class="form-group text-center">
             <?php 
-            if(!empty($_SESSION['sucesso_envio'])){
-              echo "<p style='color: #01ad01; font-size: 20px; font-weight: 600'>".$_SESSION['sucesso_envio']."</p>";
-              unset($_SESSION['sucesso_envio']);
-            }else{
               if(!empty($_SESSION['falha_envio'])){
                 echo "<p style='color: #f00>".$_SESSION['falha_envio']."</p>";
                 unset($_SESSION['falha_envio']);
-              }
-            }  
+              } 
             ?>
             <button type="submit" id="submit_btn" class="btn btn-orange-md">EFETUAR PAGAMENTO</button>
           </div>
