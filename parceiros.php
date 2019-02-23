@@ -18,6 +18,7 @@ $incio = ($quantidade_pg*$pagina)-$quantidade_pg;
 $busca = "select * from parceiros limit $incio, $quantidade_pg";
 $iten = mysqli_query($con, $busca);
 $total = mysqli_num_rows($iten);
+var_dump($incio);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -79,7 +80,7 @@ $total = mysqli_num_rows($iten);
                       ?>
                       <li>
                         <?php if($pagina_anterior != 0){ ?>
-                          <a href="partners-page.php?pagina=<?php echo $pagina_anterior ?>" aria-label="Previous">
+                          <a href="parceiros.php?pagina=<?php echo$pagina_anterior ?>" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                           </a>
                         <?php }else{  ?>
@@ -88,12 +89,12 @@ $total = mysqli_num_rows($iten);
                      </li>
                      <?php for($i = 1; $i < $num_pagina + 1; $i++){ ?>
                       <li>
-                        <a href="partners-page.php?pagina=<?php echo $i ?>"><?php echo $i ?></a>
+                        <a href="parceiros.php?pagina=<?php echo$i ?>"><?php echo $i ?></a>
                       </li>
                     <?php } ?>
                     <li>
                       <?php if($pagina_posterior <= $num_pagina){ ?>
-                        <a href="partners-page.php?pagina=<?php echo $pagina_posterior ?>" aria-label="Next">
+                        <a href="parceiros.php?pagina=<?php echo$pagina_posterior ?>" aria-label="Next">
                           <span aria-hidden="true">&raquo;</span>
                         </a>
                       <?php }else{ ?>
